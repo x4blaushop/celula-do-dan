@@ -1,17 +1,25 @@
 const canvas = document.getElementById("matrix");
 const ctx = canvas.getContext("2d");
 
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+function resize() {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+}
+resize();
 
 const letters = "01";
 const fontSize = 14;
-const columns = canvas.width / fontSize;
-const drops = [];
+let columns = canvas.width / fontSize;
+let drops = [];
 
-for (let x = 0; x < columns; x++) {
-  drops[x] = 1;
+function initMatrix() {
+  columns = canvas.width / fontSize;
+  drops = [];
+  for (let x = 0; x < columns; x++) {
+    drops[x] = 1;
+  }
 }
+initMatrix();
 
 function drawMatrix() {
   ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
@@ -34,18 +42,15 @@ function drawMatrix() {
 setInterval(drawMatrix, 50);
 
 window.addEventListener("resize", () => {
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
+  resize();
+  initMatrix();
 });
 
-/* ---------------------------
-   FUNÇÃO INVISÍVEL — SINAL
----------------------------- */
-
+/* FUNÇÃO INVISÍVEL */
 let systemAwake = true;
 
 document.addEventListener("keydown", (e) => {
   if (e.key === "i" && systemAwake) {
-    console.log("O sistema respondeu.");
+    console.log("célula responde.");
   }
 });
