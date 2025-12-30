@@ -2,32 +2,60 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>C3X4.0-BASE | Habitação Individual</title>
+  <title>C3X4.0-BASE | Habitação Inicial</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Morada ativa — nível base — Puro Matrix">
-  <link rel="stylesheet" href="style.css">
+  <meta name="description" content="Morada ativa — nível base — Matrix Essencial">
+
   <style>
-    /* Garantia da identidade visual verde Matrix */
-    body { background-color: #000; color: #00ff41; margin: 0; overflow: hidden; font-family: 'Courier New', Courier, monospace; }
-    #matrix { position: fixed; top: 0; left: 0; z-index: -1; }
-    .planet-layer { display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; text-align: center; }
-    .info-block { border: 1px solid #00ff41; padding: 20px; margin: 10px; background: rgba(0, 0, 0, 0.8); }
-    h1 { letter-spacing: 5px; text-transform: uppercase; }
+    body {
+      background-color: #000;
+      color: #00ff41;
+      margin: 0;
+      overflow: hidden;
+      font-family: "Courier New", monospace;
+    }
+
+    #matrix {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+
+    .planet-layer {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+    }
+
+    .info-block {
+      border: 1px solid #00ff41;
+      padding: 20px;
+      margin: 10px;
+      background: rgba(0, 0, 0, 0.75);
+    }
+
+    h1 {
+      letter-spacing: 4px;
+      text-transform: uppercase;
+    }
   </style>
 </head>
-<body>
+<body class="base">
 
   <canvas id="matrix"></canvas>
 
   <div class="planet-layer">
     <section class="info-block">
       <h1>C3X4.0-BASE</h1>
-      <p>Isto é uma morada.<br>Habitação segura e organizada.</p>
+      <p>Habitação inicial.<br>Acesso primário à constelação.</p>
     </section>
 
     <section class="info-block">
-      <h2>Registro</h2>
-      <p class="small">prova existencial | DNA Verde<br>copy © 2025</p>
+      <p class="small">Registro civil | DNA Verde<br>© 2025</p>
     </section>
   </div>
 
